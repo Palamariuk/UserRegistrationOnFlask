@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Main page
+{% endblock %}
+
+{% block body %}
+    <div class="boxer">
+        <h1>Зареєстровані користувачі</h1> <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Номер</th>
+                    <th>Прізвище</th>
+                    <th>Ім'я</th>
+                    <th>Електронна пошта</th>
+                    <th>Вік</th>
+                    <th>Місто</th>
+                    <th>Стать</th>
+                </tr>
+            </thead>
+            {% for user in users %}
+                <tr >
+                    <td >{{ user.id }}</td>
+                    <td >{{ user.surname }}</td>
+                    <td >{{ user.name }}</td>
+                    <td >{{ user.email }}</td>
+                    <td >{{ user.age }}</td>
+                    <td >{{ user.city }}</td>
+                    <td >{{ user.gender }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="/">зареєструвати іншого користувача.</a>
+    </div>
+{% endblock %}
+
+
+

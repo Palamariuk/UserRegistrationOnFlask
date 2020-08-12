@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Main page
+{% endblock %}
+
+{% block body %}
+    <div class="boxer">
+        <h1>Форма для зберігання інформації</h1>
+        <form action="/register" method="post">
+            <input type="text" name="surname" placeholder="Прізвище">
+            <input type="text" name="name" placeholder="Ім'я"><br>
+            <input type="text" name="email" placeholder="Електронна пошта"><br>
+            <input type="number" min="1" max="100" name="age" placeholder="Вік">
+            <input type="text" name="city" placeholder="Місто">
+
+            <select name="gender">
+                <option value="man">Чоловік</option>
+                <option value="women">Жінка</option>
+                <option value="other">Інше</option>
+            </select>
+            <br>
+
+            <input type="submit" value="Відправити"> або <a href="/results">переглянути всіх зареєстрованих користувачів</a>
+        </form>
+    </div>
+{% endblock %}
