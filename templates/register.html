@@ -6,19 +6,31 @@ Main page
 
 {% block body %}
     <div class="boxer">
-        <h1>Форма для зберігання інформації</h1>
-        <form action="/register" method="post">
-            <input type="text" name="surname" placeholder="Прізвище">
-            <input type="text" name="name" placeholder="Ім'я"><br>
-            <input type="text" name="email" placeholder="Електронна пошта"><br>
-            <input type="number" min="1" max="100" name="age" placeholder="Вік">
-            <input type="text" name="city" placeholder="Місто">
+        <h1 id="title">Форма для зберігання інформації</h1>
+        <form id="main-form" action="/register" method="post">
+            <label>
+                <input type="text" name="surname" placeholder="Прізвище">
+            </label>
+            <label>
+                <input type="text" name="name" placeholder="Ім'я">
+            </label><br>
+            <label>
+                <input type="text" name="email" placeholder="Електронна пошта">
+            </label><br>
+            <label>
+                <input type="number" min="1" max="100" name="age" placeholder="Вік">
+            </label>
+            <label>
+                <input type="text" name="city" placeholder="Місто">
+            </label>
 
-            <select name="gender">
-                <option value="man">Чоловік</option>
-                <option value="women">Жінка</option>
-                <option value="other">Інше</option>
-            </select>
+            <label>
+                <select name="gender">
+                    <option value="man">Чоловік</option>
+                    <option value="women">Жінка</option>
+                    <option value="other">Інше</option>
+                </select>
+            </label>
             <br>
 
             <input type="submit" value="Відправити"> або <a href="/results">переглянути всіх зареєстрованих користувачів</a>

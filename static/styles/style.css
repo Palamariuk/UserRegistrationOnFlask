@@ -1,5 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Rubik+Mono+One&display=swap');
+
 .boxer{
     display: grid;
     place-items: center;
 }
 
+body {
+    background: rgb(36,0,32);
+    background: linear-gradient(90deg, rgba(36,0,32,0.6446953781512605) 0%, rgba(166,84,238,0.8911939775910365) 37%, rgba(255,0,206,1) 100%);
+}
+
+#title {
+    color: #ffeeff;
+    opacity: 80%;
+    font-family: 'Rubik Mono One', sans-serif;
+    margin-top: 2em;
+}
+
+input {
+    opacity: 80%;
+    background-color: #ffeeffaa;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: black;
+    opacity: 80%;
+}

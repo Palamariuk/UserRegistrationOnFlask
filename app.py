@@ -6,6 +6,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 db = SQLAlchemy(app)
 
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True, nullable=False)
     surname = db.Column(db.String(128), nullable=False)
@@ -23,13 +24,16 @@ class User(db.Model):
         self.city = city
         self.gender = gender
 
+
 genders = {"man": "Чоловік", "women": "Жінка", "other": "Інше"}
 
 db.create_all()
 
+
 @app.route('/')
 def main_page():
     return render_template("register.html")
+
 
 @app.route('/register', methods=["POST"])
 def register():
@@ -44,10 +48,12 @@ def register():
     db.session.commit()
     return results()
 
+
 @app.route('/results')
 def results():
     users = User.query.all()
     return render_template("results.html", users=users)
+
 
 if __name__ == '__main__':
     app.run()
